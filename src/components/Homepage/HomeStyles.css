@@ -1,3 +1,6 @@
+.floating-contact{
+  display: none;
+}
 .continue-to-projects{
     position: absolute;
     bottom: -100vh;
@@ -74,4 +77,86 @@
     &:hover{
         background-color: invert();
     }
+}
+@media screen and (max-width:1200px) {
+  .floating-contact{
+    display: block;
+  }
+  .floating-contact .ant-float-btn-body {
+    background-color: #000 !important;
+    scale: 1.2;
+  }
+  .floating-contact .ant-float-btn-body *{
+    color: #fff;
+  }
+  .continue-to-projects{
+    position: absolute;
+    bottom: -80vh;
+    right: 10%;
+        z-index: 9 !important;
+}
+.continue-to-projects img{
+    width: 150px;
+
+    /* filter: invert(); */
+}
+.homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background :var(--background);
+  color:var(--color);
+  /* overflow-x: hidden; */
+  /* margin-top: 20vh; */
+}
+.homepage-text {
+  padding: 0 1rem 5rem 1rem;
+  margin: 0% 0 15% 0;
+  text-align: center;
+  justify-content: flex-start;
+}
+.homepage-text h1 {
+  font-size: 4rem !important;
+}
+.homepage-text p {
+  font-size: 2rem;
+}
+
+.homepage-project-wrapper .homepage-project-text {
+  display: none;
+}
+
+.homepage-project-wrapper .homepage-product-info{
+    padding: 0;
+    margin: 1rem 1rem 3rem 1rem;
+    gap: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+
+}
+.homepage-project-wrapper .homepage-product-info .projectImg{
+    width: 100%;
+    object-fit: contain;
+    height: 200px;
+}
+
+.homepage-project-wrapper .homepage-product-info-text h1{
+    font-size: 3rem;
+    white-space: wrap;
+    margin: 0;
+    letter-spacing: -3px;
+
+}
+.homepage-project-wrapper .homepage-product-info-text p{
+    font-size: 1.2rem;
+
+}
+.homepage-project-wrapper .product-link{
+  margin: 0 0 2rem 0;
+    &:hover{
+        background-color: invert();
+    }
+}
 }

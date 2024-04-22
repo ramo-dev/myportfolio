@@ -17,8 +17,6 @@ const [loading, setIsLoading] = useState(false);
 
 const form = {name, email, subject , message}
 
-const styles = {}
-
 
 async function handleSendingEmail(){
   try{
@@ -35,6 +33,11 @@ async function handleSendingEmail(){
   }
   catch(err){
     toast.info(err)
+  }finally{
+    setEmail("")
+    setName("");
+    setMassage("");
+    setSubject("");
   }
 }
 
@@ -47,7 +50,7 @@ function handleSubmit(e){
     message.length == 0
   ) {
 
-    alert("shit is fucking empty")
+    toast.info("Please fill in the required form")
   }
   else{
     handleSendingEmail()

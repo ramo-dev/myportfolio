@@ -73,6 +73,7 @@ function handleSubmit(e){
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
               className="input-box"
+              required
             />
             <input
               type="email"
@@ -81,6 +82,7 @@ function handleSubmit(e){
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
               className="input-box"
+              required
             />
             <input
               type="text"
@@ -89,6 +91,7 @@ function handleSubmit(e){
               onChange={(e) => setSubject(e.target.value)}
               placeholder="Subject"
               className="input-box"
+              required
             />
             <textarea
               name="message"
@@ -96,6 +99,7 @@ function handleSubmit(e){
               onChange={(e) => setMassage(e.target.value)}
               placeholder="Message"
               className="input-message"
+              required
             />
             <button className="btn form-btn" type="submit">
               {loading ? <LoadingOutlined className="loader-contact"/> : "Send Me a Message"}

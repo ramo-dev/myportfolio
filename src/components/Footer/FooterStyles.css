@@ -157,9 +157,11 @@ footer {
 
   .input-box {
     width: 100%;
+    background: var( --background);
   }
   .input-message {
    width: 100%;
+   background: var( --background);
   }
 
   .form-btn {

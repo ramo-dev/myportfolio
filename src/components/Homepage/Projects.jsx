@@ -22,7 +22,7 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "DigiStore, the premier platform where talented individuals like you converge to showcase their exceptional abilities and connect with a global audience hungry for unique services. Whether you're a master craftsman, a green-thumbed gardener, a visionary painter, or possess any other remarkable talent, DigiTalent is your stage to shine.",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "Imagenn, the AI-powered image generator, turns your text into captivating visuals instantly. Say goodbye to boring text – with Imagenn, your messages come to life in stunning images. Try Imagenn now and unleash the power of visual storytelling!",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "NoteStack is more than just a note-taking app; it's your knowledge hub. Tired of information scattered across emails, documents, and your brain? NoteStack gathers it all in one beautiful, searchable space.",
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "This is a portfolio React application built using Vite.for Hazel",
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "Sneakr Planet is a website dedicated to showcasing and selling a variety of sneakers. It offers a range of features and sections to explore different products and learn more about them.",
   },
 
   {
@@ -93,6 +93,6 @@ export const projects = [
     date: "12 Dec",
     type: "web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ipsum distinctio corrupti fugit. Veniam beatae hic nobis aut provident consequuntur laudantium sed, dicta modi minima facilis ducimus, fugiat tempore neque",
+      "This is a full-stack web application for creating, browsing, and managing blog posts. It utilizes React for the front end, Firebase as a Backend as a Service (BaaS), Firestore for database management, and user authentication. ",
   },
 ];

@@ -16,7 +16,7 @@ footer {
   color: var(--color);
   position: absolute;
   right: 10%;
-  bottom: 10%;
+  bottom: 35%;
   animation: bounceUp 4s infinite;
   transition: 0.3s ease-in-out;
   &:hover {
@@ -104,7 +104,7 @@ footer {
 
 @media screen and (max-width: 1200px) {
   .toTop {
-    bottom: 7%;
+    bottom: 25%;
   }
   footer {
     text-align: center;

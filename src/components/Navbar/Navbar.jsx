@@ -90,7 +90,7 @@ const Navbar = () => {
             <li>Contacts</li>
           </Link>
           <a
-            href="https://github.com/ramo-dev/lofiLagoon"
+            href="https://github.com/ramo-dev"
             target="_blank"
             className="btn"
           >

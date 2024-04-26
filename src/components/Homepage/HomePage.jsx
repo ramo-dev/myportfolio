@@ -87,6 +87,7 @@ const HomePage = () => {
               className="homepage-project-wrapper"
               style={{ background: item.background, color: item.color }}
               key={item.id}
+              id="projects"
             >
               <Flex className="homepage-project-text" justify="space-between">
                 <div>
@@ -123,11 +124,11 @@ const HomePage = () => {
                         background: item.color,
                         fontSize: "1rem",
                         color: item.background,
-                        transition : "0.3s ease-in-out",
+                        transition: "0.3s ease-in-out",
                         ":hover ": {
-                          background : item.background,
-                          color: item.color
-                        }
+                          background: item.background,
+                          color: item.color,
+                        },
                       }}
                     >
                       Visit
@@ -138,7 +139,7 @@ const HomePage = () => {
             </div>
           );
         })}
-        <Footer />
+        <Footer title="Like What You See?" description="Lets Work Together" />
       </div>
     </>
   );

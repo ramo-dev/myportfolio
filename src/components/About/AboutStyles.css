@@ -1,0 +1,117 @@
+.aboutText {
+  padding: 1rem;
+}
+.aboutText h1 {
+  font-size: 3rem;
+}
+.about-sec-1,
+.about-sec-2,
+.about-sec-3 {
+  height: max-content;
+  gap: 0;
+  padding: 0 4rem;
+}
+
+.aboutText .about-sec-1 .first-about-title {
+  font-size: 4rem;
+  text-align: start;
+
+}
+.aboutText .about-sec-2 .second-about-title {
+  font-size: 4rem;
+  text-align: end;
+}
+.aboutText .about-sec-3 .third-about-title {
+  font-size: 4rem;
+}
+/* .about-sec-1 div{
+    margin: -4rem 0 0 0;
+} */
+
+.about-sec-1 div p {
+  width: 50%;
+  font-size: 1.7rem;
+}
+.about-sec-1 div p::before{
+    content: "*";
+    margin: 1rem;
+    font-size: 3rem;
+    color: grey
+}
+.about-sec-1 div{
+  overflow: hidden;
+
+}
+.about-sec-1 img {
+  width: 50%;
+}
+
+.about-sec-2 div p {
+  width: 50%;
+  font-size: 1.4rem;
+}
+.about-sec-2 div p::before{
+    content: "*";
+    margin: 1rem;
+    font-size: 3rem;
+    color: grey
+}
+.about-sec-2 img {
+  width: 50%;
+}
+
+
+@media screen and (max-width:1200px) {
+  .aboutText {
+  padding: 1rem;
+}
+.aboutText h1 {
+  font-size: 2rem;
+}
+.about-sec-1,
+.about-sec-2,
+.about-sec-3 {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+
+.aboutText .about-sec-1 .first-about-title {
+  font-size: 3rem;
+  text-align: start;
+
+}
+.aboutText .about-sec-2 .second-about-title {
+  font-size: 3rem;
+  text-align: start;
+}
+.aboutText .about-sec-3 .third-about-title {
+  font-size: 4rem;
+}
+
+.about-sec-1 div p {
+  width: 100%;
+  font-size: 1.4rem;
+}
+.about-sec-1 div p::before{
+    display: none;
+}
+.about-sec-1 div{
+  overflow: hidden;
+
+}
+.about-sec-1 img {
+  display: none;
+}
+
+.about-sec-2 div p {
+  width: 100%;
+  font-size: 1.4rem;
+}
+.about-sec-2 div p::before{
+    display: none;
+}
+.about-sec-2 img {
+  display: none;
+}
+
+}

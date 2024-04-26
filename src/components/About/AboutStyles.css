@@ -116,5 +116,7 @@
 .about-sec-2 img {
   display: none;
 }
-
+.abt-footer .footer-Text {
+  font-size: 2rem !important;
+}
 }

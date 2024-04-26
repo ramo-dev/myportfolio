@@ -40,7 +40,7 @@ const About = () => {
         </Flex>
       </div>
       <Footer
-        title="Want To Collaborate,work or just say Hi?"
+        title="Want to Team up?"
         className="abt-footer"
         description="reach out to me!"
         fontSize={2}

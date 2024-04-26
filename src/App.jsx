@@ -44,7 +44,7 @@ function App() {
             body: JSON.stringify({ action: "Wake the server up" }), // Sending data as JSON string
           }
         );
-        const data = await resp.json();
+        const data = await resp.text();
         console.log(data);
       } catch (err) {
         console.log(err);

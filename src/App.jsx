@@ -25,11 +25,31 @@ function App() {
    
     const timer = setTimeout(() => {
       setIsLoading(false);
-       document.body.style.transition = "1s ease-in-out";
     }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
+
+
+  useEffect(()=>{
+   try{
+     async function sendToServer(){
+        const resp = await fetch("https://myportserver.onrender.com", {
+          headers: "POST",
+          method: {
+            "Content-Type": "application/json",
+          },
+          body: "Wake the server up",
+        });
+        const data = await resp.json()
+        console.log(data)
+    }
+   }catch(err){
+    console.log(err)
+   }
+
+    sendToServer()
+  },[])
 
   return isLoading ? (
     <PreLoader />

@@ -53,9 +53,7 @@ const Navbar = () => {
             <Link to="/contact">
               <li>Contacts Me</li>
             </Link>
-            <Link to="/contact">
-              <li>Blog</li>
-            </Link>
+           
             <a
               href="https://github.com/ramo-dev/"
               target="_blank"

@@ -10,6 +10,7 @@
   height: max-content;
   gap: 0;
   padding: 0 4rem;
+  justify-content: center;
 }
 
 .aboutText .about-sec-1 .first-about-title {
@@ -24,9 +25,11 @@
 .aboutText .about-sec-3 .third-about-title {
   font-size: 4rem;
 }
-/* .about-sec-1 div{
-    margin: -4rem 0 0 0;
-} */
+.about-sec-1 div{
+       height: 100%;
+
+  align-items: flex-start;
+}
 
 .about-sec-1 div p {
   width: 50%;

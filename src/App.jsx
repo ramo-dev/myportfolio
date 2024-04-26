@@ -31,25 +31,29 @@ function App() {
   }, []);
 
 
-  useEffect(()=>{
-   try{
-     async function sendToServer(){
-        const resp = await fetch("https://myportserver.onrender.com", {
-          headers: "POST",
-          method: {
-            "Content-Type": "application/json",
-          },
-          body: "Wake the server up",
-        });
-        const data = await resp.json()
-        console.log(data)
+  useEffect(() => {
+    async function sendToServer() {
+      try {
+        const resp = await fetch(
+          "https://myportserver.onrender.com/wakeUpserver",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ action: "Wake the server up" }), // Sending data as JSON string
+          }
+        );
+        const data = await resp.json();
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
     }
-   }catch(err){
-    console.log(err)
-   }
 
-    sendToServer()
-  },[])
+    sendToServer();
+  }, []);
+
 
   return isLoading ? (
     <PreLoader />

@@ -1,22 +1,20 @@
 import { Divider, Flex } from "antd";
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import {
-  MdOutlineWavingHand,
-  MdWavingHand,
-} from "react-icons/md";
+import { MdOutlineWavingHand } from "react-icons/md";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../../context/Theme";
+import { ThemeContext } from "@/Hooks/Theme";
 import Logo from "@/assets/Logo.png";
 import Logo2 from "@/assets/Logo-invert.png";
+import MyCv from "../../assets/MyCV.pdf";
 
 const Sidebar = () => {
   const { isDark } = useContext(ThemeContext);
   const text = isDark ? "text-white" : "text-black";
   return (
     <div
-      className={`px-7 rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-3/12 h-full    max-md:hidden ${
+      className={`md:px-7 pt-5 px-5 md:rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-3/12 h-full min-w-[40vh]  ${
         isDark
           ? "border border-dashed border-zinc-700"
           : "border border-dashed border-zinc-200"
@@ -30,16 +28,16 @@ const Sidebar = () => {
       />
 
       <div
-        className={`hover:scale-125 transition ps-2 border border-dashed h-12 w-12 text-3xl rounded-full flex pt-2 absolute top-52 right-[-2vh] hover:justify-start ${
+        className={`hover:scale-125 transition ps-2 border border-dashed h-12 w-12 text-3xl rounded-full pt-2 absolute top-52 right-[-2vh] hover:justify-start hidden md:flex${
           isDark
             ? " border-zinc-700 bg-zinc-950 "
             : " border-zinc-700 bg-zinc-100"
         }`}
       >
-         <MdOutlineWavingHand />
+        <MdOutlineWavingHand />
       </div>
       <Flex align="center" vertical gap="1rem" className="pb-4">
-        <h1 className="text-3xl font-semibold">Annuar Ndungu</h1>
+        <h1 className="text-3xl font-semibold">Annuar Ndung'u</h1>
         <button
           className={`p-2 ${
             isDark ? "bg-zinc-800" : "border border-dashed border-zinc-700"
@@ -71,6 +69,13 @@ const Sidebar = () => {
             </Link>
           </Flex>
         </Flex>
+        <a
+          href={MyCv}
+          download
+          className={`hover:text-zinc-400 p-3 bg-inherit border border-dashed border-zinc-700 w-full text-center`}
+        >
+          Download My Cv
+        </a>
       </Flex>
     </div>
   );

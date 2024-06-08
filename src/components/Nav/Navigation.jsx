@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Flex } from "antd";
-import { ThemeContext } from '@/context/Theme';
+import { ThemeContext } from '@/Hooks/Theme';
 import { LuMoonStar, LuSun } from "react-icons/lu";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Logo from "@/assets/Logo.png";
@@ -32,6 +32,9 @@ const Navigation = () => {
     };
   }, []);
 
+  function handleThemeChange() {
+    setIsDark(!isDark);
+  }
   return (
     <Flex justify="center">
       <nav className={`${isDark ? "bg-zinc-500" : "bg-white"} z-10 transition-all  w-full  fixed border border-zinc-700 border-dashed border-t-0 md:px-24 border-x-0 flex p-3 bg-opacity-5 backdrop-blur-lg mx-auto ${isOpen ? 'flex-col' : 'flex-row'} ${isOpen ? 'h-auto' : 'h-16'}`}>
@@ -50,7 +53,7 @@ const Navigation = () => {
 
             <button
               ref={themeIconRef}
-              onClick={() => setIsDark(!isDark)}
+              onClick={handleThemeChange}
               className="hover:opacity-50 scale-125 pe-4 bounce"
             >
               {isDark ? <LuSun /> : <LuMoonStar />}
@@ -76,13 +79,13 @@ const Navigation = () => {
         <div
           className={`${
             isOpen ? 'block' : 'hidden'
-          } w-full border-zinc-700  rounded-md md:hidden ${isDark ? "text-white" : "text-black"}`}
+          } w-full border-zinc-700 text-xl rounded-md md:hidden ${isDark ? "text-white" : "text-black"}`}
           
         >
-          <Link to="#" className="block px-4 py-2 hover:opacity-50">Home</Link>
-          <Link to="#" className="block px-4 py-2 hover:opacity-50">About</Link>
-          <Link to="#" className="block px-4 py-2 hover:opacity-50">Contact</Link>
-          
+          <Link to="/" className="block px-4 py-3 hover:opacity-50 mt-4">Home</Link>
+          <Link to="/projects" className="block px-4 py-3 hover:opacity-50">Projects</Link>
+          <Link to="/contact" className="block px-4 py-3 hover:opacity-50">Contact</Link>
+          <Link to="/blog" className="block px-4 py-3 hover:opacity-50">Blog</Link>
         </div>
       </nav>
     </Flex>

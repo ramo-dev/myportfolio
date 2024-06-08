@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "@/context/Theme";
+import { ThemeContext } from "@/Hooks/Theme";
 import { RiTwitterXFill, RiGithubFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
 import { Flex } from "antd";
@@ -12,22 +12,39 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <Flex
-    align="center"
-    justify="space-between"
-    
+      align="center"
+      justify="space-between"
       className={`${
         isDark ? "bg-zinc-500" : "bg-white"
-      } z-10 transition-all bottom-0  border border-zinc-700 border-dashed border-b-0 md:px-20 px-5 border-x-0 flex al p-3 bg-opacity-5 backdrop-blur-lg  `}
+      } z-10 transition-all bottom-0  border border-zinc-700 border-dashed border-b-0 md:px-24 border-x-0 flex p-2 bg-opacity-5 backdrop-blur-lg  `}
     >
-      
-        <a href="#"><img src={isDark ? Logo : Logo2} alt="" className="h-14 opacity-40"/></a>
-      <p className="text-2l text-gray-500">@{currentYear}</p>
-      <Flex className="text-2xl" gap=".8rem">
-        <Link to="https://twitter.com/dfw_ramo" target="_blank" className="hover:text-gray-500 text-gray-500"><RiTwitterXFill /></Link>
-        <Link to="https://github.com/ramo-dev" target="_blank" className="hover:text-gray-500 text-gray-500"><RiGithubFill /></Link>
-        <Link to="https://www.linkedin.com/in/annuar-ndungu" target="_blank" className="hover:text-gray-500 text-gray-500"><FaLinkedin/></Link>
+      <a href="#">
+        <img src={isDark ? Logo : Logo2} alt="" className="h-14 opacity-80" />
+      </a>
+      <p className="text-2l ">Annuar - @{currentYear}</p>
+      <Flex className="text-2xl " gap=".8rem">
+        <Link
+          to="https://twitter.com/dfw_ramo"
+          target="_blank"
+          className="hover:text-gray-500 "
+        >
+          <RiTwitterXFill />
+        </Link>
+        <Link
+          to="https://github.com/ramo-dev"
+          target="_blank"
+          className="hover:text-gray-500 "
+        >
+          <RiGithubFill />
+        </Link>
+        <Link
+          to="https://www.linkedin.com/in/annuar-ndungu"
+          target="_blank"
+          className="hover:text-gray-500 "
+        >
+          <FaLinkedin />
+        </Link>
       </Flex>
-      
     </Flex>
   );
 };

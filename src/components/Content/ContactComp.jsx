@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../Hooks/Theme";
 import { useForm } from "react-hook-form";
 import { Modal } from "antd";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const ContactComp = () => {
   const { isDark } = useContext(ThemeContext);
-  const { isOpen, setIsOpen } = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setIsLoading] = useState(false);
+  const API = import.meta.env.VITE_REMOTE_URL
 
   const { register, handleSubmit } = useForm();
 
@@ -14,7 +17,22 @@ const ContactComp = () => {
   }
 
   const onSubmit = async (data) => {
-    handleOk()
+    setIsLoading(true);
+    try {
+      const res = await fetch(API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      console.log(res);
+      setIsLoading(false);
+      handleOk();
+    } catch (e) {
+      console.log(e);
+      setIsLoading(false);
+    }
   };
 
   const text = isDark ? "text-black" : "text-white";
@@ -23,26 +41,29 @@ const ContactComp = () => {
   } border border-zinc-700 rounded-lg w-full `;
   return (
     <div>
-      <Modal
-        open={isOpen}
-        onOk={handleOk}
-        onClose={()=>setIsOpen(!isOpen)}
-        footer={
-          <button
-            onClick={()=>{setIsOpen(!isOpen)}}
-            type="submit"
-            className={`w-full md:self-end mt-5 p-3 rounded-lg ${
-              isDark ? "bg-zinc-200" : "bg-zinc-700"
-            } ${text} hover:bg-opacity-80`}
-          >
-            Dismiss Message
-          </button>
-        }
-      >
-        <p className="text-md">
-          Message sent successfully, you will receive a confirmation email shortly, if you ddnt try checking your spam folder
-        </p>
-      </Modal>
+      {isOpen && (
+        <Modal
+          onCancel={handleOk}
+          open={isOpen}
+          onClose={() => setIsOpen(!isOpen)}
+          footer={
+            <button
+              onClick={handleOk}
+              type="submit"
+              className={`w-full md:self-end mt-5 p-3 rounded-lg ${
+                isDark ? "bg-zinc-200" : "bg-zinc-700"
+              } ${text} hover:bg-opacity-50`}
+            >
+              Dismiss Message
+            </button>
+          }
+        >
+          <p className="text-md mt-4">
+            Message sent successfully, you will receive a confirmation email
+            shortly, if you ddnt try checking your spam folder
+          </p>
+        </Modal>
+      )}
       <form
         action=""
         className="flex flex-col mt-4"
@@ -75,11 +96,11 @@ const ContactComp = () => {
         ></textarea>
         <button
           type="submit"
-          className={`md:w-4/12 md:self-end mt-3 p-3 rounded-lg ${
+          className={`md:w-4/12 md:self-end mt-3 p-3 rounded-lg flex justify-center ${
             isDark ? "bg-zinc-200" : "bg-zinc-700"
           } ${text} hover:bg-opacity-80`}
         >
-          Send Message
+          {loading ? <AiOutlineLoading3Quarters className="animate-spin "/> : "Send Message"}
         </button>
       </form>
     </div>

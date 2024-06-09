@@ -9,6 +9,7 @@ import ProjectPreview from "@/routes/ProjectPreview";
 import NotFound from "@/routes/NotFound";
 
 function App() {
+  const api = import.meta.env.VITE_WAKE_UP;
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'dark';
@@ -17,6 +18,14 @@ function App() {
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }, [isDark]);
+
+  useEffect(()=>{
+    async function wakeServer(){
+      const x = await fetch(api);
+      console.log(x.status)
+    }
+    wakeServer();
+  },[api])
 
   return (
     <ThemeContext.Provider value={{ setIsDark, isDark }}>

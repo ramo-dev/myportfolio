@@ -19,7 +19,7 @@ const ContactComp = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const res = await fetch(API, {
+      await fetch(API, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

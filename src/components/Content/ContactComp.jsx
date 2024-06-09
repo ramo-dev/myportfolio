@@ -26,7 +26,7 @@ const ContactComp = () => {
         },
         body: JSON.stringify(data),
       });
-      console.log(res);
+      // console.log(res);
       setIsLoading(false);
       handleOk();
     } catch (e) {

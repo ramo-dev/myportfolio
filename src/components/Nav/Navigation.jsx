@@ -48,7 +48,7 @@ const Navigation = () => {
             <Link to="/" className="hover:text-gray-500">Home</Link>
               <Link to="/projects" className="hover:text-gray-500">Projects</Link>             
               <Link to="/contact" className="hover:text-gray-500">Contact</Link>
-              <Link to="/blog" className="hover:text-gray-500">Blog</Link>
+              <a href="https://blog.annuar.site" className="hover:text-gray-500">Blog</a>
             </div>
 
             <button
@@ -85,7 +85,7 @@ const Navigation = () => {
           <Link to="/" className="block px-4 py-3 hover:opacity-50 mt-4">Home</Link>
           <Link to="/projects" className="block px-4 py-3 hover:opacity-50">Projects</Link>
           <Link to="/contact" className="block px-4 py-3 hover:opacity-50">Contact</Link>
-          <Link to="/blog" className="block px-4 py-3 hover:opacity-50">Blog</Link>
+          <a href="https://blog.annuar.site" className="block px-4 py-3 hover:opacity-50">Blog</a>
         </div>
       </nav>
     </Flex>

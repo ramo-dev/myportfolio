@@ -27,7 +27,7 @@ const Home = () => {
       <Flex
         justify="center"
         gap="1.4rem"
-        className="my-24 px-3 relative flex-col md:flex md:flex-row"
+        className="my-24 md:px-3 relative flex-col md:flex md:flex-row"
       >
         <Sidebar />
 

@@ -14,7 +14,7 @@ const Sidebar = () => {
   const text = isDark ? "text-white" : "text-black";
   return (
     <div
-      className={`md:px-7 pt-5 px-5 md:rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-3/12 h-full min-w-[40vh]  ${
+      className={`mt-4 md:px-7 pt-5 px-5 md:rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-3/12 h-full min-w-[40vh]  ${
         isDark
           ? "border border-dashed border-zinc-700"
           : "border border-dashed border-zinc-200"

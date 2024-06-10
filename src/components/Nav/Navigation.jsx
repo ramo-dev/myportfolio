@@ -37,27 +37,28 @@ const Navigation = () => {
   }
   return (
     <Flex justify="center">
-      <nav className={`${isDark ? "bg-zinc-500" : "bg-white"} z-10 transition-all  w-full  fixed border border-zinc-700 border-dashed border-t-0 md:px-24 border-x-0 flex p-3 bg-opacity-5 backdrop-blur-lg mx-auto ${isOpen ? 'flex-col' : 'flex-row'} ${isOpen ? 'h-auto' : 'h-16'}`}>
+      <nav className={`${isDark ? "bg-zinc-500" : "bg-white"} z-10 transition-all  w-full  fixed border border-zinc-700 border-dashed border-t-0 md:px-24 border-x-0 flex p-3 bg-opacity-5 backdrop-blur-lg mx-auto ${isOpen ? 'flex-col' : 'flex-row'} ${isOpen ? 'h-auto' : 'md:h-20'}`}>
         <div className="flex items-center space-x-6 justify-between w-full">
           <Link to="/">
-            <img draggable={false} src={`${isDark ? Logo : LogoInvert}`} alt="Logo" className="h-14  hover:animate-spin " />
+            <img draggable={false} src={`${isDark ? Logo : LogoInvert}`} alt="Logo" className="h-16  hover:animate-spin " />
           </Link>
           <div className={`${isDark ? "text-white" : "text-black"} hidden md:flex items-center space-x-8`}>
             
-            <div className={`${isDark ? "text-white" : "text-black"} flex space-x-7`}>
+            <div className={`${isDark ? "text-white" : "text-black"} flex space-x-7 text-lg`}>
             <Link to="/" className="hover:text-gray-500">Home</Link>
               <Link to="/projects" className="hover:text-gray-500">Projects</Link>             
               <Link to="/contact" className="hover:text-gray-500">Contact</Link>
-              <a href="https://blog.annuar.site" className="hover:text-gray-500">Blog</a>
+              
             </div>
 
             <button
               ref={themeIconRef}
               onClick={handleThemeChange}
-              className="hover:opacity-50 scale-125 pe-4 bounce"
+              className="hover:opacity-50 scale-125 pe-1 bounce"
             >
               {isDark ? <LuSun /> : <LuMoonStar />}
             </button>
+            <a href="https://blog.annuar.site" className="hover:text-gray-500 px-8 ms-0 bg-zinc-700 py-3 rounded-lg dark:text-white">My Blog</a>
           </div>
         </div>
 
@@ -65,13 +66,13 @@ const Navigation = () => {
         <button
               ref={themeIconRef}
               onClick={() => setIsDark(!isDark)}
-              className="hover:opacity-50 focus:outline-none absolute top-5 right-16 scale-150"
+              className="hover:opacity-50 focus:outline-none absolute top-8 right-20 scale-[1.7]"
             >
               {isDark ? <LuSun /> : <LuMoonStar />}
             </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className=" focus:outline-none absolute top-[16px] right-3 text-2xl me-1"
+            className=" focus:outline-none absolute top-[24px] right-3 text-3xl me-1"
           >
            {isOpen ? <RxCross1/> : <RxHamburgerMenu/>}
           </button>

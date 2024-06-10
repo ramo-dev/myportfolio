@@ -1,16 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { projectsItms } from "./ProjectItem";
-import { Image, Skeleton } from "antd";
+import { Image, Skeleton, Tooltip } from "antd";
 import { ThemeContext } from "@/Hooks/Theme";
 import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectDetailComp = () => {
   const { id } = useParams();
   const project = projectsItms.find((item) => item.id.toString() === id);
   const [isLoading, setIsLoading] = useState(true);
+  const [tooltip, setTooltip] = useState(false);
 
   const { isDark } = useContext(ThemeContext);
   const text = isDark ? "text-black" : "text-white";
@@ -19,6 +20,14 @@ const ProjectDetailComp = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setTooltip(true);
+    const timer = setTimeout(() => {
+      setTooltip(false);
+    }, 4000);
+    return () => clearTimeout(timer);
   }, []);
 
   return project ? (
@@ -34,14 +43,15 @@ const ProjectDetailComp = () => {
           <meta charSet="utf-8" />
           <title>{project.title}</title>
         </Helmet>
-        <LazyLoadImage
-          alt={project.description}
-          effect="blur"
-          placeholderSrc={project.image}
-          src={project.image}
-          afterLoad={() => <Image src={project.image} alt={project.alt} />}
-        />
-
+        <Tooltip
+          title="click here to preview image"
+          open={project.Tooltip ? tooltip : false}
+        >
+          <LazyLoadComponent>
+            {" "}
+            <Image src={project.image} alt={project.alt} />
+          </LazyLoadComponent>
+        </Tooltip>
         <h1 className="text-xl font-bold my-3">{project.title}</h1>
         <p className="my-2  ">{project.description}</p>
         <button

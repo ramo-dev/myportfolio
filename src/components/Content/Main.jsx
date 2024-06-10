@@ -8,7 +8,7 @@ const Main = ({ Component, Title, project }) => {
 
   return (
     <div
-      className={`p-5 rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-7/12 h-full flex flex-col w-full ${
+      className={`mt-4 p-5 md:rounded-t-3xl z-0 bg-opacity-20 backdrop-blur-lg sticky bottom-15 border-zinc-700  md:w-7/12 h-full flex flex-col w-full ${
         isDark
           ? "border border-dashed border-zinc-700"
           : "border border-dashed border-zinc-200"

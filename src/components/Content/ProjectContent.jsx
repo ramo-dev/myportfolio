@@ -1,4 +1,4 @@
-import { Flex, Image, Tooltip, Skeleton } from "antd";
+import { Flex, Image, Skeleton } from "antd";
 import { useContext, useEffect, useState } from "react";
 import { projectsItms } from "./ProjectItem";
 import { ThemeContext } from "@/Hooks/Theme";
@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ProjectContent = () => {
-  const [tooltip, setTooltip] = useState(false);
+  
   const [visibleCount, setVisibleCount] = useState(3);
   const [isLoading, setIsLoading] = useState(true);
   const [loadmore, setIsLoadingMore] = useState(false);
@@ -19,13 +19,7 @@ const ProjectContent = () => {
     }, 1000);
   }, []);
 
-  useEffect(() => {
-    setTooltip(true);
-    const timer = setTimeout(() => {
-      setTooltip(false);
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   const handleReadMore = () => {
     setIsLoadingMore(true);
@@ -57,12 +51,7 @@ const ProjectContent = () => {
               gap="1rem"
               className="md:flex-row flex-col mt-5  md:py-3 pb-5 rounded-lg border-zinc-700 border-dashed hover:scale-[1.01] transition"
             >
-              <Tooltip
-                title="click here to preview image"
-                open={item.Tooltip ? tooltip : false}
-               
-                
-              >
+             
                 <div className="rounded-lg md:w-6/12 w-full">
                 <LazyLoadImage
                 alt={item.description}
@@ -79,7 +68,7 @@ const ProjectContent = () => {
                 />
                  
                 </div>
-              </Tooltip>
+              
               <Flex
                 className="w-full gap-5 md:w-5/12"
                 vertical

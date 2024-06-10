@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import { projectsItms } from "./ProjectItem";
 import { ThemeContext } from "@/Hooks/Theme";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ProjectContent = () => {
   const [tooltip, setTooltip] = useState(false);
@@ -62,11 +64,20 @@ const ProjectContent = () => {
                 
               >
                 <div className="rounded-lg md:w-6/12 w-full">
+                <LazyLoadImage
+                alt={item.description}
+                effect="blur"
+                placeholderSrc = {item.image}
+                src={item.image}
+                afterLoad={()=>(
                   <Image
-                    src={item.image}
-                    alt={item.alt}
-                    className="rounded-lg min-h-48 object-cover "
-                  />
+                  src={item.image}
+                  alt={item.alt}
+                  className="rounded-lg min-h-48 object-cover "
+                />
+                )}
+                />
+                 
                 </div>
               </Tooltip>
               <Flex

@@ -43,6 +43,7 @@ Might add different themes just for fun in the future
 - react-icons
 - react-router-dom
 - react-hook-form
+- react-lazy-load-image-component
 
 ## server
 - nodemon

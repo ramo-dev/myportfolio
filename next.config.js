@@ -2,11 +2,11 @@ async rewrites() {
     return [
       {
         source: "/blog",
-        destination: "https://annuar-blog.vercel.app/blog", 
+        destination: "https://blog.annuar.site", 
       },
       {
         source: "/blog/:path*",
-        destination: "https://annuar-blog.vercel.app/blog/:path*", 
+        destination: "https://blog.annuar.site/blog/:path*", 
       },
     ];
   },

@@ -53,10 +53,10 @@ const Sidebar = () => {
           <Flex vertical>
             <h1>Email</h1>
             <Link
-              to="mailto:anuarramo@gmail.com"
+              to="mailto:annuar.dev@gmail.com"
               className="hover:text-gray-500"
             >
-              anuarramo@gmail.com
+              annuar.dev@gmail.com
             </Link>
           </Flex>
         </Flex>

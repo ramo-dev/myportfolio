@@ -35,17 +35,18 @@ export const projectsItms = [
 
 
   },
-  {
+    {
     id: 3,
-    image: BiznaDashboard,
-    title: "Bizna Dashboard",
-    description: "A dashboard application for managing business analytics and insights from their clients while selling digital goods convinienty.",
-    alt: "Bizna Dashboard",
-    website : "/",
+    image: CRMBoilerPlate,
+    title: "CRM BoilerPlate",
+    description: "A boilerplate template for developing CRM (Customer Relationship Management) systems.",
+    alt: "CRM BoilerPlate",
+     website : "/",
     sourceCode : "/"
 
+
   },
-  {
+    {
     id: 4,
     image: CLIChatBot,
     title: "CLI ChatBot",
@@ -56,17 +57,17 @@ export const projectsItms = [
 
 
   },
-  {
+{
     id: 5,
-    image: CRMBoilerPlate,
-    title: "CRM BoilerPlate",
-    description: "A boilerplate template for developing CRM (Customer Relationship Management) systems.",
-    alt: "CRM BoilerPlate",
-     website : "/",
+    image: BiznaDashboard,
+    title: "Bizna Dashboard",
+    description: "A dashboard application for managing business analytics and insights from their clients while selling digital goods convinienty.",
+    alt: "Bizna Dashboard",
+    website : "/",
     sourceCode : "/"
 
-
   },
+
   {
     id: 6,
     image: DemaEatery,

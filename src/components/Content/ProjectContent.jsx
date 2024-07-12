@@ -1,3 +1,4 @@
+
 import { Flex, Image, Skeleton } from "antd";
 import { useContext, useEffect, useState } from "react";
 import { projectsItms } from "./ProjectItem";
@@ -58,7 +59,7 @@ const ProjectContent = () => {
                 effect="blur"
                 placeholderSrc = {item.image}
                 src={item.image}
-                afterLoad={()=>(
+                onLoad={()=>(
                   <Image
                   src={item.image}
                   alt={item.alt}
@@ -70,12 +71,12 @@ const ProjectContent = () => {
                 </div>
               
               <Flex
-                className="w-full gap-5 md:w-5/12"
+                className="w-full gap-4 md:w-5/12 h-max"
                 vertical
                 justify="space-around"
               >
-                <h1 className="md:text-3xl text-lg font-bold">{item.title}</h1>
-                <p className="text-wrap md:text-lg text-sm">
+                <Link to={`/projects/${item.id}`}><h1 className=" md:text-xl text-lg font-bold">{item.title}</h1>
+</Link>                <p className="text-wrap md:text-lg text-sm overflow-hidden line-clamp-3">
                   {item.description}
                 </p>
                 <Link to={`/projects/${item.id}`}>
@@ -90,7 +91,7 @@ const ProjectContent = () => {
               <Skeleton
                 active
                 className={`${
-                  isDark ?  "bg-zinc-800" : "bg-zinc-200"
+                  isDark ?  "bg-zinc-800/30" : "bg-zinc-200/30"
                 } min-h-44 min-w-full md:w-5/12 p-3 rounded-lg mt-2`}
               />
             ) : (
@@ -108,3 +109,4 @@ const ProjectContent = () => {
 };
 
 export default ProjectContent;
+

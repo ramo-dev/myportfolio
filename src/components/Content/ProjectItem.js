@@ -1,3 +1,12 @@
+
+import BrightSpendLandingPage from "@/assets/projects/BrightspendLandingPage.png";
+import BrightSpendAI from "@/assets/projects/BrightSpendAi.png";
+import BiznaDashboard from "@/assets/projects/Bizna-Dashboard.png";
+import CLIChatBot from "@/assets/projects/CLIChatBot.png";
+import CRMBoilerPlate from "@/assets/projects/CRM-boilerplate.png";
+import DemaEatery from "@/assets/projects/Dema-Eatery.png";
+import TeesandStuffs from "@/assets/projects/Tees&Stuffs.png";
+import UIGenerator from "@/assets/projects/UI-generator.png";
 import digistore from "@/assets/projects/digistore.png";
 import Uber from "@/assets/projects/UberEats.png";
 import Sneakr from "@/assets/projects/SneakrPlanet.png";
@@ -5,53 +14,104 @@ import Notestack from "@/assets/projects/Notestack.png";
 import Hazel from "@/assets/projects/HAzel.png";
 import Devbyte from "@/assets/projects/devbyte.png";
 
-
 export const projectsItms = [
   {
     id: 1,
-    image: Uber,
-    title: "Uber Eats(clone)", 
-    description: "Uber Eats Description", 
-    alt: "Uber Eats",
-    Tooltip : true
+    image: BrightSpendLandingPage,
+    title: "BrightSpend Landing Page",
+    description: "The landing page for BrightSpend, an AI-powered financial education platform built with material tailwind, react and zustand for state management.",
+    alt: "BrightSpend Landing Page",
   },
   {
     id: 2,
-    image: digistore,
-    title: "Digistore", 
-    description: "Digistore description", 
-    alt: "digistore",
-   
+    image: BrightSpendAI,
+    title: "BrightSpend AI",
+    description: "An AI chatbot developed for providing financial literacy and tracking services at Brightspend.",
+    alt: "BrightSpend AI"
   },
-
   {
     id: 3,
-    image: Sneakr,
-    title: "Sneakr Planet", 
-    description: "Sneakr Planet Description", 
-    alt: "Sneakr Planet"
+    image: BiznaDashboard,
+    title: "Bizna Dashboard",
+    description: "A dashboard application for managing business analytics and insights from their clients while selling digital goods convinienty.",
+    alt: "Bizna Dashboard"
   },
   {
     id: 4,
-    image: Notestack,
-    title: "Notestack", 
-    description: "Notestack Description", 
-    alt: "Notestack"
+    image: CLIChatBot,
+    title: "CLI ChatBot",
+    description: "A command-line interface chatbot for interactive user interactions.",
+    alt: "CLI ChatBot"
   },
   {
     id: 5,
-    image: Hazel,
-    title: "Hazel", 
-    description: "Hazel Description", 
-    alt: "Hazel"
+    image: CRMBoilerPlate,
+    title: "CRM BoilerPlate",
+    description: "A boilerplate template for developing CRM (Customer Relationship Management) systems.",
+    alt: "CRM BoilerPlate"
   },
   {
     id: 6,
+    image: DemaEatery,
+    title: "Dema Eatery",
+    description: "An online platform for ordering food from the comfort of your Home.",
+    alt: "Dema Eatery"
+  },
+  {
+    id: 7,
+    image: TeesandStuffs,
+    title: "Tees & Stuffs",
+    description: "An e-commerce store specializing in selling T-shirts and related merchandise.Built with NextJs,Shadcn, Prisma, mongodb and nextauth",
+    alt: "Tees & Stuffs"
+  },
+  {
+    id: 8,
+    image: UIGenerator,
+    title: "UI Generator",
+    description: "A tool for generating user interface components and layouts. Buit with Nextjs, Gemini, Antdesign and firebase",
+    alt: "UI Generator"
+  },
+  {
+    id: 9,
+    image: digistore,
+    title: "Digistore", 
+    description: "An e-commerce platform for digital products and online sales.",
+    alt: "digistore"
+  },
+  {
+    id: 10,
+    image: Uber,
+    title: "Uber Eats(clone)", 
+    description: "A clone of the Uber Eats platform focusing on food delivery services.",
+    alt: "Uber Eats"
+  },
+  {
+    id: 11,
+    image: Sneakr,
+    title: "Sneakr Planet", 
+    description: "A marketplace for buying and selling sneakers and related products.",
+    alt: "Sneakr Planet"
+  },
+  {
+    id: 12,
+    image: Notestack,
+    title: "Notestack", 
+    description: "A digital note-taking application for organizing and managing notes.",
+    alt: "Notestack"
+  },
+  {
+    id: 13,
+    image: Hazel,
+    title: "Hazel", 
+    description: "A project management tool designed to streamline team collaboration.",
+    alt: "Hazel"
+  },
+  {
+    id: 14,
     image: Devbyte,
     title: "Devbyte", 
-    description: "Devbyte Description", 
+    description: "A platform for developers to share and discover bite-sized coding tutorials.",
     alt: "Devbyte"
   }
 ];
-
 

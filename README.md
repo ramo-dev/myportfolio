@@ -1,65 +1,36 @@
-# Portfolio README
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This repository contains the source code for Annuar Ndung'u's portfolio website. Annuar Ndung'u is a passionate and self-taught web developer with a focus on crafting engaging digital experiences. The portfolio showcases his skills, projects, and services.
+## Getting Started
 
-## Table of Contents
-- [About](#about)
-- [Projects](#projects)
-- [Contact](#contact)
+First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Home
-The "Home" section introduces Annuar Ndung'u and provides insights into his journey as a web developer. It highlights his passion for crafting digital experiences and includes information about his skills and projects.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Projects
-The "Projects" section provides an overview of Annuar's journey into web development. It emphasizes his proficiency in front-end technologies such as REact.js, and back-end development using Python and Node with frameworks like Flask and Express. The section also mentions his expertise in both SQL (MySQL) and NoSQL (MongoDB) databases.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Contact
-The "Contact" section provides information on how to reach out to Annuar Ndung'u. It includes his location, email, and phone number. A contact form is also available for convenient communication.
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-**To Do**
-## Custom next js headless CMS 
-I will configure a custom next js, GraphQl powered headless CMS to point to my domain to manage, delete and read blogs from my portfolio using the ```/blog``` route. All these will be hosted on vercel.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Customize the layout and increase perfomance
-Improve the UI and increase the perfomance and Load speed of the app
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-**Might Do**
-## Mine or open Portfolio
-Still deciding whether to make the portfolio purposly mine or commercialize it for to the open for everyon to use as theirs by loggin in, posting and connecting blog sites to it.Still thinking....hehhe
+## Deploy on Vercel
 
-## Themes
-Might add different themes just for fun in the future
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-**Designed by Annuar**
-## Libraires used client
-- React.js
-- Ant design
-- react-helmet
-- react-icons
-- react-router-dom
-- react-hook-form
-- react-lazy-load-image-component
-
-## server
-- nodemon
-- express
-- nodemailer
-- dotenv
-- email-validator
-
-
-
-- [Twitter](https://twitter.com/ramo_szn)
-- [Facebook](https://www.facebook.com/Annuar.Ndungu/)
-- [Instagram](https://www.instagram.com/dfw_ramo?igsh=bHBoc3k5YmM5YWFp)
-- [GitHub](https://github.com/ramo-dev)
-- [LinkedIn](https://www.linkedin.com/in/annuar-ndungu-5a0690242)
-
----
-
-*Note: This README provides an overview of the portfolio structure and content. For the latest information and updates, please refer to the actual portfolio website.*
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

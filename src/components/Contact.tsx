@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from 'sonner'; // Import Sonner for toast notifications
 import { Loader2 } from 'lucide-react'; // Import loader icon
+import ChatDialog from "./ChatBot";
 
 interface ContactMeProps {
   isOpen: boolean;
@@ -32,6 +33,8 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
     message: '',
   });
   const [loading, setLoading] = useState<boolean>(false);
+  const [isChatOpen, setChatOpen] = useState(false);
+
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -77,6 +80,11 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
     if (onClose) onClose(); // Close the dialog after showing toast notifications
   };
 
+
+  const toggleChatDialog = () => {
+    setChatOpen((prev) => !prev);
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] bg-background">
@@ -119,13 +127,15 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
             {loading && <Loader2 className="animate-spin mr-2" />}
             Send a Message
           </Button>
-          <div className="mt-4 text-center text-sm">
-            Want to talk to my AI bot?{" "}
-            <Link href="#" className="underline">
-              Try it
-            </Link>
-          </div>
         </form>
+        <div className="mt-4 text-center text-sm">
+          Want to talk to my AI bot?{" "}
+          <Button variant="link" className="underline p-0" onClick={toggleChatDialog}>
+            Try it
+          </Button>
+        </div>
+
+        {isChatOpen && <ChatDialog isOpen={isChatOpen} onClose={toggleChatDialog} />}
       </DialogContent>
     </Dialog>
   );

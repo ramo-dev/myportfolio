@@ -77,7 +77,7 @@ export default function RootLayout({
         <meta name="author" content="Annuar Ndung'u" />
         <meta property="og:title" content="Annuar Ndungu - UI/UX Designer and Fullstack Developer" />
         <meta property="og:description" content="Discover high-quality web solutions crafted by Annuar Ndungu, a skilled UI/UX designer and Fullstack developer from Nairobi, Kenya." />
-        <meta property="og:image" content="https://annuar.site/meta/favicon/ms-icon-310x310.png" />
+        <meta property="og:image" content="https://annuar.site/meta/favicon/blackLogo.png" />
         <meta property="og:url" content="https://annuar.site" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -1,3 +1,4 @@
+
 import { useState, ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,6 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
     }));
   };
 
-
   const sendMail = async () => {
     setLoading(true);
     try {
@@ -71,7 +71,6 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
     }
   };
 
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     await sendMail(); // Wait for the mail sending and toast notifications
@@ -86,9 +85,9 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
         </DialogHeader>
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
           <div className="grid gap-2">
-            <Label htmlFor="name">Full Name</Label>
+            <Label htmlFor="fullName">Full Name</Label>
             <Input
-              id="name"
+              id="fullName"
               type="text"
               placeholder="John Doe"
               value={formData.fullName}
@@ -156,5 +155,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
 

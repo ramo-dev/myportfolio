@@ -56,7 +56,7 @@ const Footer: FC = () => {
 
         <p className="text-xl font-bold mb-6 self-start">Useful Links</p>
 
-        <div className="flex space-x-6 flex-wrap">
+        <div className="flex gap-4 flex-wrap">
           {links.map((link, index) => (
             <Link key={index} href={link.href} passHref legacyBehavior >
               <a

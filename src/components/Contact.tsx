@@ -140,18 +140,18 @@ const Contact: React.FC = () => {
 
   return (
 
-    <div className="mt-16 h-[14rem] flex flex-col rounded-lg shadow-lg" id="contact">
+    <div className="md:mt-16 mt-7 md:h-[20rem] h-[18rem] flex flex-col rounded-lg " id="contact">
       <h1 className="text-3xl font-extrabold text-foreground mb-4 self-start">
         Contact Me
       </h1>
-      <p className="text-lg text-foreground mb-4 self-start">
+      <p className="md:text-lg text-md text-foreground mb-4 self-start">
         Want to chat? Just send me a message and I'll respond as soon as possible.
         <br />
         Or reach out from the socials on the floating panel.
       </p>
       <Button
         onClick={() => setIsDialogOpen(true)}
-        className="self-start  font-semibold py-2  rounded-lg  transition-colors duration-300"
+        className="self-start my-4  font-semibold py-2  rounded-lg  transition-colors duration-300"
       >
         Contact Me
       </Button>

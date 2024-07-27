@@ -23,7 +23,7 @@ const userDetails: UserDetails = {
   name: "Annuar",
   role: "frontend developer",
   company: "Space ya Tech",
-  description: "I am currently work at Space ya Tech, where I help develop web apps. SYT is an open-source web platform for the youths built with React.",
+  description: "I am currently work at Space ya Tech, where I help develop web apps. SYT is an open-source web platform for the youths built with.",
   blogArticles: [
     {
       href: "https://blog.annuar.site/how-to-stay-focused-while-programming-top-strategies",
@@ -47,15 +47,15 @@ const About: FC = () => {
     <div id="about">
       <h1 className="leading font-bold text-3xl my-4">About Me</h1>
 
-      <div className="text-lg my-6">
+      <div className="md:text-lg text-md my-6">
         Hey, I'm {userDetails.name} 👋, a {userDetails.role}, optimist, and community builder. {userDetails.description}
         <Badge variant="secondary">React</Badge>
       </div>
-      <p className="text-lg">
+      <p className="md:text-lg text-md">
         Throughout the years, I've shared content on my blog, striving for simplicity. You'll discover articles about the technologies that capture my interest, insights into my career growth, and the knowledge I've gained along the way.{" "}
       </p>
 
-      <div className="flex flex-wrap gap-4 my-8 mt-14">
+      <div className="flex flex-wrap gap-4 my-8 md:mt-14 mt-7">
         {userDetails.blogArticles.map((article, index) => (
           <a
             key={index}
@@ -68,10 +68,10 @@ const About: FC = () => {
               className="w-full h-40 object-cover rounded-lg"
             />
             <div className="flex-1 flex flex-col pt-3">
-              <h1 className="text-xl font-bold text-foreground-background hover:text-blue-600 dark:hover:text-blue-500/70 mb-2">
+              <h1 className="md:text-xl text-lg font-bold text-foreground-background hover:text-blue-600 dark:hover:text-blue-500/70 mb-2">
                 {article.title}
               </h1>
-              <p className="text-foreground-background line-clamp-3">
+              <p className="md:text-lg text-md text-foreground-background line-clamp-3">
                 {article.description}
               </p>
             </div>

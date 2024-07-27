@@ -48,8 +48,8 @@ const projects = [
 const Projects = () => {
   return (
     <div>
-      <h1 className="leading font-bold text-3xl mt-14">My Latest Projects</h1>
-      <p className="text-lg my-5">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my latest.</p>
+      <h1 className="leading font-bold text-3xl md:mt-14 mt-7">My Latest Projects</h1>
+      <p className="md:text-lg text-md my-5">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my latest.</p>
       <BentoGrid className="mx-auto my-5">
         {projects.map((project, index) => {
           let colSpanClass = "md:col-span-1"; // Default

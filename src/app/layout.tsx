@@ -4,9 +4,9 @@
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeContext } from "./hooks/ThemeContext";
 import { Toaster } from "@/components/ui/sonner";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -84,7 +84,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Annuar Ndung'u - UI/UX Designer and Fullstack Developer" />
         <meta name="twitter:description" content="Discover high-quality web solutions crafted by Annuar Ndung'u, a skilled UI/UX designer and Fullstack developer from Nairobi, Kenya." />
         <meta name="twitter:image" content="https://www.annuar.site/meta/blackLogo.png" />
-        <meta name="twitter:site" content="@dfw_ramo" />
+        <meta name="twitter:site" content="@ramo_szn" />
         <script type="application/ld+json">
           {`
             {
@@ -100,16 +100,31 @@ export default function RootLayout({
                 "addressCountry": "Kenya"
               },
               "sameAs": [
-                "https://twitter.com/dfw_ramo",
+                "https://x.com/ramo_szn",
                 "https://github.com/ramo-dev",
                 "https://www.linkedin.com/in/annuar-ndungu"
               ]
             }
           `}
         </script>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+          `}
+        </Script>
       </head>
       <body className={`${inter.className} ${theme ? "dark" : ""}`}>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ?? ''} />
         <Toaster position="top-right" />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           {children}

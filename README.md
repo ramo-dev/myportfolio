@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Annuar AI
+Welcome to Annuar AI, the personal assistant chatbot that reflects my passion for web development and technology. Built using Next.js, Google Gemini, and Vercel, Annuar AI is here to provide quick, relevant answers to all your tech-related queries. Think of it as your go-to assistant for anything from React tips to backend tricks!
 
-## Getting Started
+🚀 Features
+Tech Expertise: Answers related to React, Tailwind CSS, Node.js, MongoDB, and more.
+Personalized Interaction: Responses crafted to reflect Annuar Ndung’u’s knowledge and style.
+Fast and Reliable: Powered by Next.js for a seamless experience, hosted on Vercel for reliability.
+Contact Details: If Annuar AI can’t help, you’ll get direct contact details for Annuar.
+🛠️ Technology Stack
+Next.js: Framework for building the React-based application with server-side rendering.
+Google Gemini: Generative AI model that powers the chatbot’s intelligent responses.
+Vercel: Deployment platform ensuring fast and reliable hosting.
+📦 Installation
+To run Annuar AI locally, follow these steps:
 
-First, run the development server:
+Clone the Repository:
 
-```bash
+bash
+Copy code
+git clone https://github.com/ramo-dev/myportfolio
+cd annuar-ai
+Install Dependencies:
+
+bash
+Copy code
+npm install
+Set Up Environment Variables:
+Create a .env.local file in the root directory and add your Google Gemini API key:
+
+env
+Copy code
+GEMINI_API_KEY=your-google-gemini-api-key
+Run the Development Server:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to see Annuar AI in action!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📝 Usage
+Greeting: Start a conversation with a friendly "Hello" and get personalized responses related to web development.
+Inquiries: Ask questions about React, Tailwind CSS, Node.js, MongoDB, and more.
+Off-Topic: If you ask about something outside Annuar AI’s expertise, you'll receive a polite message directing you to contact Annuar directly at anuarramo@gmail.com.
+🌐 Deployment
+To deploy Annuar AI:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Push Your Code to GitHub:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+bash
+Copy code
+git add .
+git commit -m "Deploy Annuar AI"
+git push origin main
+Connect to Vercel:
 
-## Learn More
+Sign in to Vercel.
+Import your GitHub repository.
+Follow the prompts to deploy your application.
+🤔 Troubleshooting
+API Key Issues: Ensure your GEMINI_API_KEY is correct and set up in the .env.local file.
+Deployment Failures: Check Vercel logs for any errors and resolve them accordingly.
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+💬 Contact
+For any questions or feedback, reach out to Annuar Ndung’u at anuarramo@gmail.com.

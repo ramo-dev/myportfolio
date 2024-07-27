@@ -23,7 +23,7 @@ const userDetails: UserDetails = {
   name: "Annuar",
   role: "software developer",
   company: "Space ya Tech",
-  description: "I am currently work at Space ya Tech, where I help develop web apps. SYT is an open-source web platform for the youths built with.",
+  description: "I am currently work at Space ya Tech as a Front-end Developer, where I help develop web apps. SYT is an open-source web platform for the youths built with.",
   blogArticles: [
     {
       href: "https://blog.annuar.site/how-to-stay-focused-while-programming-top-strategies",

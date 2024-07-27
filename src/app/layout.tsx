@@ -33,7 +33,7 @@ export default function RootLayout({
   useEffect(() => {
     // This code runs only on the client
     const storedTheme = localStorage.getItem("theme");
-    setIsDark(storedTheme ? JSON.parse(storedTheme) : false);
+    setIsDark(storedTheme ? JSON.parse(storedTheme) : true);
   }, []);
 
   const toggleTheme = () => {

@@ -7,6 +7,7 @@ import "./globals.css";
 import { ThemeContext } from "./hooks/ThemeContext";
 import { Toaster } from "@/components/ui/sonner";
 import Script from 'next/script';
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Annuar Ndung'u - UI/UX Designer and Fullstack Developer</title>
@@ -99,7 +100,7 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
           `}
         </Script>
-      </head>
+      </Head>
       <body className={`${inter.className} ${theme ? "dark" : ""}`}>
         <Toaster position="top-right" />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>

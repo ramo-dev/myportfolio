@@ -27,7 +27,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [theme, setIsDark] = useState<boolean>(false);
+  const [theme, setIsDark] = useState<boolean>(true);
   const api = process.env.NEXT_PUBLIC_WAKE_UP || '';
 
   useEffect(() => {

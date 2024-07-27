@@ -1077,6 +1077,30 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[30rem\] {
+  height: 30rem;
+}
+.h-\[20rem\] {
+  height: 20rem;
+}
+.h-\[15rem\] {
+  height: 15rem;
+}
+.h-\[19rem\] {
+  height: 19rem;
+}
+.h-\[18\.5rem\] {
+  height: 18.5rem;
+}
+.h-\[18\.3rem\] {
+  height: 18.3rem;
+}
+.h-\[18\.2rem\] {
+  height: 18.2rem;
+}
+.h-\[18\.9rem\] {
+  height: 18.9rem;
+}
 .min-h-\[28rem\] {
   min-height: 28rem;
 }
@@ -1200,6 +1224,9 @@ video {
 .gap-4 {
   gap: 1rem;
 }
+.gap-5 {
+  gap: 1.25rem;
+}
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -1219,6 +1246,26 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 .self-start {
   align-self: flex-start;
@@ -1418,6 +1465,10 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -2222,6 +2273,18 @@ html {
 
   .md\:auto-rows-\[18rem\] {
     grid-auto-rows: 18rem;
+  }
+
+  .md\:auto-rows-\[18\.5rem\] {
+    grid-auto-rows: 18.5rem;
+  }
+
+  .md\:auto-rows-\[18\.4rem\] {
+    grid-auto-rows: 18.4rem;
+  }
+
+  .md\:auto-rows-\[18\.6rem\] {
+    grid-auto-rows: 18.6rem;
   }
 
   .md\:grid-cols-2 {

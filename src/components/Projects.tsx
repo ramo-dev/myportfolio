@@ -2,13 +2,14 @@
 
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
-import { ExternalLinkIcon } from "lucide-react";
+import { Bot, Briefcase, ExternalLinkIcon, GalleryVerticalEnd, LayoutDashboard, Shirt } from "lucide-react";
 
 const projects = [
   {
     href: "https://www.github.com/ramo-dev",
     src: "/projects/CLIChatBot.png",
     alt: "CLI ChatBot",
+    icon: <Bot />,
     title: "CLI ChatBot",
     description: "A command-line interface chatbot for interactive user interactions.",
   },
@@ -17,6 +18,7 @@ const projects = [
     href: "https://www.github.com/ramo-dev",
     src: "/projects/Bizna-Dashboard.png",
     alt: "Bizna Dashboard",
+    icon: <LayoutDashboard />,
     title: "Bizna Dashboard",
     description: "A dashboard application for managing business analytics and insights from their clients while selling digital goods conveniently.",
   },
@@ -24,6 +26,7 @@ const projects = [
     href: "https://www.github.com/ramo-dev",
     src: "/projects/Tees&Stuffs.png",
     alt: "Tees & Stuffs",
+    icon: <Shirt />,
     title: "Tees & Stuffs",
     description: "An e-commerce store specializing in selling T-shirts and related merchandise. Built with NextJs, Shadcn, Prisma, MongoDB, and NextAuth.",
   },
@@ -31,6 +34,7 @@ const projects = [
     href: "https://www.annuar.site",
     src: "/projects/Portfolio.png",
     alt: "Annuar Ndung'u",
+    icon: <GalleryVerticalEnd />,
     title: "Annuar Ndung'u",
     description: "This is a custom made portfolio built using next, framer, shadcn and tailwind",
   },
@@ -38,6 +42,7 @@ const projects = [
     href: "https://www.github.com/ramo-dev/brightspend",
     src: "/projects/BrightspendLandingPage.png",
     alt: "BrightSpend Landing Page",
+    icon: <Briefcase />,
     title: "BrightSpend Landing Page",
     description: "The landing page for BrightSpend, an AI-powered financial education platform built with material tailwind, react and zustand for state management.",
   },
@@ -72,6 +77,7 @@ const Projects = () => {
           return (
             <BentoGridItem
               key={index}
+              icon={project.icon}
               title={project.title}
               description={project.description}
               href={project.href}

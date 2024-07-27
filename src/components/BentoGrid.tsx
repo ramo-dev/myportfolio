@@ -24,7 +24,7 @@ export const BentoGridItem = ({
     <a
       href={href}
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border justify-between flex flex-col space-y-4",
+        "h-[18.9rem] rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none  px-3 py-2 dark:bg-black dark:border-white/[0.2] bg-white border justify-between flex flex-col space-y-1",
         colSpan, // Apply colSpan dynamically
         className
       )}
@@ -32,7 +32,7 @@ export const BentoGridItem = ({
       rel="noopener noreferrer"
     >
       {image && (
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-2">
           <img
             src={image}
             alt={title as string}
@@ -46,7 +46,7 @@ export const BentoGridItem = ({
         <div className=" font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
           {title}
         </div>
-        <div className="line-clamp-2 font-normal text-neutral-600 text-xs dark:text-neutral-300">
+        <div className="line-clamp-2 font-normal text-neutral-600 text-sm dark:text-neutral-300">
           {description}
         </div>
       </div>
@@ -64,7 +64,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 mx-auto",
+        "grid md:auto-rows-[18.6rem] grid-cols-1 md:grid-cols-3 gap-4 mx-auto",
         className
       )}
     >

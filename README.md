@@ -1,66 +1,70 @@
-Annuar AI
-Welcome to Annuar AI, the personal assistant chatbot that reflects my passion for web development and technology. Built using Next.js, Google Gemini, and Vercel, Annuar AI is here to provide quick, relevant answers to all your tech-related queries. Think of it as your go-to assistant for anything from React tips to backend tricks!
+# Portfolio README
 
-🚀 Features
-Tech Expertise: Answers related to React, Tailwind CSS, Node.js, MongoDB, and more.
-Personalized Interaction: Responses crafted to reflect Annuar Ndung’u’s knowledge and style.
-Fast and Reliable: Powered by Next.js for a seamless experience, hosted on Vercel for reliability.
-Contact Details: If Annuar AI can’t help, you’ll get direct contact details for Annuar.
-🛠️ Technology Stack
-Next.js: Framework for building the React-based application with server-side rendering.
-Google Gemini: Generative AI model that powers the chatbot’s intelligent responses.
-Vercel: Deployment platform ensuring fast and reliable hosting.
-📦 Installation
-To run Annuar AI locally, follow these steps:
+This repository contains the source code for Annuar Ndung'u's portfolio website. Annuar Ndung'u is a passionate and self-taught web developer with a focus on crafting engaging digital experiences. The portfolio showcases his skills, projects, and services.
 
-Clone the Repository:
+## Table of Contents
+- [About](#about)
+- [Projects](#projects)
+- [Contact](#contact)
 
-bash
-Copy code
-git clone https://github.com/ramo-dev/myportfolio
-cd annuar-ai
-Install Dependencies:
 
-bash
-Copy code
-npm install
-Set Up Environment Variables:
-Create a .env.local file in the root directory and add your Google Gemini API key:
+## Home
+The "Home" section introduces Annuar Ndung'u and provides insights into his journey as a web developer. It highlights his passion for crafting digital experiences and includes information about his skills and projects.
 
-env
-Copy code
-GEMINI_API_KEY=your-google-gemini-api-key
-Run the Development Server:
 
-bash
-Copy code
-npm run dev
-Visit http://localhost:3000 to see Annuar AI in action!
+## Projects
+The "Projects" section provides an overview of Annuar's journey into web development. It emphasizes his proficiency in front-end technologies such as REact.js, and back-end development using Python and Node with frameworks like Flask and Express. The section also mentions his expertise in both SQL (MySQL) and NoSQL (MongoDB) databases.
 
-📝 Usage
-Greeting: Start a conversation with a friendly "Hello" and get personalized responses related to web development.
-Inquiries: Ask questions about React, Tailwind CSS, Node.js, MongoDB, and more.
-Off-Topic: If you ask about something outside Annuar AI’s expertise, you'll receive a polite message directing you to contact Annuar directly at anuarramo@gmail.com.
-🌐 Deployment
-To deploy Annuar AI:
+## Contact
+The "Contact" section provides information on how to reach out to Annuar Ndung'u. It includes his location, email, and phone number. A contact form is also available for convenient communication.
 
-Push Your Code to GitHub:
 
-bash
-Copy code
-git add .
-git commit -m "Deploy Annuar AI"
-git push origin main
-Connect to Vercel:
+**To Do**
+## Custom next js headless CMS
+I will configure a custom next js, GraphQl powered headless CMS to point to my domain to manage, delete and read blogs from my portfolio using the ```/blog``` route. All these will be hosted on vercel.
 
-Sign in to Vercel.
-Import your GitHub repository.
-Follow the prompts to deploy your application.
-🤔 Troubleshooting
-API Key Issues: Ensure your GEMINI_API_KEY is correct and set up in the .env.local file.
-Deployment Failures: Check Vercel logs for any errors and resolve them accordingly.
-📝 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Customize the layout and increase perfomance
+Improve the UI and increase the perfomance and Load speed of the app
 
-💬 Contact
-For any questions or feedback, reach out to Annuar Ndung’u at anuarramo@gmail.com.
+**Might Do**
+## Mine or open Portfolio
+Still deciding whether to make the portfolio purposly mine or commercialize it for to the open for everyon to use as theirs by loggin in, posting and connecting blog sites to it.Still thinking....hehhe
+
+## Themes
+Might add different themes just for fun in the future
+
+---
+
+**Designed by Annuar**
+## Libraires used client
+- Next.js
+- Shadcn
+- Acernity
+- lucide-react
+- google/generative-ai
+- Tailwind-merge
+- @next/third-parties
+- sonner
+- sitemap
+- simplex-noise
+- framer-motion
+- react-hook-form
+- react-lazy-load-image-component
+- clsx
+
+## server
+- nodemon
+- express
+- nodemailer
+- dotenv
+- email-validator
+
+
+
+- [Twitter](https://twitter.com/ramo_szn)
+- [GitHub](https://github.com/ramo-dev)
+- [LinkedIn](https://www.linkedin.com/in/annuar-ndungu)
+
+---
+
+*Note: This README provides an overview of the portfolio structure and content. For the latest information and updates, please refer to the actual portfolio website.*

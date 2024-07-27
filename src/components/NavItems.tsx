@@ -9,17 +9,17 @@ export const navItems = [
   },
   {
     name: "About",
-    link: "/about",
+    link: "#about",
     icon: <User className="text-neutral-500 dark:text-white" />,
   },
   {
     name: "Contact",
-    link: "/contact",
+    link: "#contact",
     icon: <MessageCircle className="text-neutral-500 dark:text-white" />,
   },
   {
     name: "Ai",
-    link: "/chat",
+    link: "#chat",
     icon: <Bot className="text-neutral-500 dark:text-white" />,
   },
 ];

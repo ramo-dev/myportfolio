@@ -53,8 +53,8 @@ const Footer: FC = () => {
   return (
     <footer className="bg-transparent text-foreground pb-8">
       <div className="flex flex-col">
-        <h1 className="text-2xl font-bold mb-2 self-start">Annuar</h1>
-        <p className="text-lg mb-6 self-start">Useful Links</p>
+
+        <p className="text-xl font-bold mb-6 self-start">Useful Links</p>
 
         <div className="flex space-x-6 flex-wrap">
           {links.map((link, index) => (

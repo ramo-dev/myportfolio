@@ -44,7 +44,7 @@ const userDetails: UserDetails = {
 
 const About: FC = () => {
   return (
-    <div>
+    <div id="about">
       <h1 className="leading font-bold text-3xl my-4">About Me</h1>
 
       <div className="text-lg my-6">

@@ -47,7 +47,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <h1 className="leading font-bold text-3xl md:mt-14 mt-7">My Latest Projects</h1>
       <p className="md:text-lg text-md my-5">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my latest.</p>
       <BentoGrid className="mx-auto my-5">

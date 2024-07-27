@@ -24,7 +24,7 @@ export const BentoGridItem = ({
     <a
       href={href}
       className={cn(
-        "h-[18.9rem] rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none  px-3 py-2 dark:bg-black dark:border-white/[0.2] bg-white border justify-between flex flex-col space-y-1",
+        "h-[18.9rem] rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none  p-3 dark:bg-black dark:border-white/[0.2] bg-white border justify-between flex flex-col space-y-1",
         colSpan, // Apply colSpan dynamically
         className
       )}

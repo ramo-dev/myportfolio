@@ -33,8 +33,7 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "ts-node": "^10.9.2",
-    "typeit-react": "^2.7.2"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/node": "^20",

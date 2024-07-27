@@ -87,7 +87,7 @@ const Projects = () => {
           );
         })}
       </BentoGrid>
-      <a href="https://www.github.com/ramo-dev" className="hover:animate-pulse text-blue-500 dark:hover:text-blue-500/70 flex items-center gap-1">
+      <a href="https://www.github.com/ramo-dev" className="hover:animate-pulse text-blue-500 dark:hover:text-blue-500/70 flex items-center gap-1 my-5">
         Explore other Projects <ExternalLinkIcon className="h-5" />
       </a>
     </div>

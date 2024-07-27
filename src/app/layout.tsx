@@ -106,14 +106,14 @@ export default function RootLayout({
           }
         `}} />
         {/* Google tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=G-6QBYT8V2P6`} />
         <script dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+            gtag('config', 'G-6QBYT8V2P6');
         `}} />
       </head>
       <body className={`${inter.className} ${theme ? "dark" : ""}`}>

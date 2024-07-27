@@ -9,15 +9,15 @@ interface icons {
 const Icons: icons[] = [
   {
     href: "https://www.linkedin.com/in/annuar-ndungu/",
-    icon: <Linkedin className="text-blue-500 dark:text-blue-300" />
+    icon: <Linkedin className="text-foreground hover:text-blue-300" />
   },
   {
     href: "https://github.com/ramo-dev",
-    icon: <Code2 className="text-blue-500 dark:text-blue-300" />
+    icon: <Code2 className="text-foreground hover:text-blue-300" />
   },
   {
     href: "mailto:hello@annuar.site",
-    icon: <Mail className="text-blue-500 dark:text-blue-300" />
+    icon: <Mail className="text-foreground hover:text-blue-300" />
   }
 
 

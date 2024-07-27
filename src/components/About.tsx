@@ -79,7 +79,7 @@ const About: FC = () => {
         ))}
       </div>
       <a
-        href="/"
+        href="https://blog.annuar.site"
         className="hover:animate-pulse text-blue-500 dark:hover:text-blue-500/70 flex items-center gap-1"
       >
         Explore articles{" "}

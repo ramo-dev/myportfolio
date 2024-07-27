@@ -48,9 +48,7 @@ export const FloatingNav = ({
   });
 
 
-  useEffect(() => {
-    console.log(theme)
-  }, [])
+
 
   return (
     <AnimatePresence mode="wait">

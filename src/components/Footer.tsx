@@ -51,7 +51,7 @@ const links: LinkItem[] = [
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-transparent text-white pb-8">
+    <footer className="bg-transparent text-foreground pb-8">
       <div className="flex flex-col">
         <h1 className="text-2xl font-bold mb-2 self-start">Annuar</h1>
         <p className="text-lg mb-6 self-start">Useful Links</p>
@@ -63,7 +63,7 @@ const Footer: FC = () => {
                 target={link.target}
                 rel={link.rel}
                 download={link.download ? true : undefined}
-                className={`flex items-center text-white hover:${link.hoverColor}`}
+                className={`flex items-center text-foreground hover:${link.hoverColor}`}
               >
                 {link.icon}
                 {link.label}

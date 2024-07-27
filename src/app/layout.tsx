@@ -1,6 +1,5 @@
 
-
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
@@ -11,12 +10,25 @@ import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
+async function wakeServer(api: string) {
+  try {
+    const response = await fetch(api);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch API: ${response.statusText}`);
+    }
+    console.log(`API response status: ${response.status}`);
+  } catch (error) {
+    console.error("Error in wakeServer:", error);
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const [theme, setIsDark] = useState<boolean>(false);
+  const api = process.env.NEXT_PUBLIC_WAKE_UP || '';
 
   useEffect(() => {
     // This code runs only on the client
@@ -29,6 +41,12 @@ export default function RootLayout({
     setIsDark(newTheme);
     localStorage.setItem("theme", JSON.stringify(newTheme));
   };
+
+  useEffect(() => {
+    if (api) {
+      wakeServer(api);
+    }
+  }, [api]);
 
   return (
     <html lang="en">
@@ -100,5 +118,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 

@@ -1,6 +1,4 @@
-
-
-import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,14 +19,14 @@ interface ContactMeProps {
 }
 
 interface FormData {
-  name: string;
+  fullName: string;
   email: string;
   message: string;
 }
 
 const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
+    fullName: '',
     email: '',
     message: '',
   });
@@ -43,35 +41,41 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
   };
 
 
-
   const sendMail = async () => {
     setLoading(true);
     try {
-      const response = await fetch("/api/mailer", {
+      const url = process.env.NEXT_PUBLIC_REMOTE_URL ?? '';
+      if (!url) {
+        throw new Error('The API URL is not defined');
+      }
+
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-      const data = await response.json();
-      if (response.ok) {
-        toast.success(data.message);
-      } else {
-        toast.error(data.message || 'Something went wrong');
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
+
+      const text = await response.text();
+      toast.success(text);
     } catch (err) {
-      console.log(err);
+      console.error('Failed to send email:', err);
       toast.error('Failed to send email');
     } finally {
       setLoading(false);
     }
   };
 
-  const handleSubmit = (e: FormEvent) => {
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    sendMail();
-    if (onClose) onClose(); // Close the dialog after submission
+    await sendMail(); // Wait for the mail sending and toast notifications
+    if (onClose) onClose(); // Close the dialog after showing toast notifications
   };
 
   return (
@@ -87,7 +91,7 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
               id="name"
               type="text"
               placeholder="John Doe"
-              value={formData.name}
+              value={formData.fullName}
               onChange={handleChange}
               required
             />

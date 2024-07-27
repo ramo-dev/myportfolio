@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
 
   return (
 
-    <div className="md:mt-16 mt-7 md:h-[20rem] h-[18rem] flex flex-col rounded-lg " id="contact">
+    <div className="md:mt-16 mt-7 md:h-[15rem] h-[18rem] flex flex-col rounded-lg " id="contact">
       <h1 className="text-3xl font-extrabold text-foreground mb-4 self-start">
         Contact Me
       </h1>

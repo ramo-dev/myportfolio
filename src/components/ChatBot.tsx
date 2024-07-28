@@ -141,12 +141,12 @@ const ChatDialog: React.FC<ChatDialogProps> = ({ isOpen, onClose }) => {
               Message
             </Label>
             <div className="flex items-center pt-0 px-2 py-2">
-              <Input
+              <input
                 required
                 id="message"
                 name="message"
                 placeholder="Type your message here..."
-                className="focus-visible:border-0 focus-visible:outline-0 resize-none border-0 shadow-none focus-visible:ring-0 flex-grow"
+                className="ring-offset-0 focus-visible:border-0 focus-visible:outline-0 resize-none border-0 shadow-none focus-visible:ring-0 flex-grow"
               />
               <Button
                 type="submit"

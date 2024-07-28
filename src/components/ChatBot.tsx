@@ -146,7 +146,7 @@ const ChatDialog: React.FC<ChatDialogProps> = ({ isOpen, onClose }) => {
                 id="message"
                 name="message"
                 placeholder="Type your message here..."
-                className="ring-offset-0 focus-visible:border-0 focus-visible:outline-0 resize-none border-0 shadow-none focus-visible:ring-0 flex-grow"
+                className="bg-transparent ring-offset-0 focus-visible:border-0 focus-visible:outline-0 resize-none border-0 shadow-none focus-visible:ring-0 flex-grow"
               />
               <Button
                 type="submit"

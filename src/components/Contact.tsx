@@ -87,7 +87,7 @@ const ContactMe: React.FC<ContactMeProps> = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px] bg-background">
+      <DialogContent className="sm:max-w-[425px] bg-background z-[9998]">
         <DialogHeader>
           <DialogTitle>Send a Message</DialogTitle>
         </DialogHeader>

@@ -100,13 +100,13 @@ const ChatDialog: React.FC<ChatDialogProps> = ({ isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="md:p-4 py-4 px-3 h-full md:max-h-[78vh]  z-[9999] flex flex-col">
+      <DialogContent className=" md:p-4 py-4 px-3 h-full md:max-h-[78vh]  z-[9999] flex flex-col">
         <DialogHeader>
           <DialogTitle>Chat with Annuar Ai</DialogTitle>
           <DialogClose />
         </DialogHeader>
         <div className="flex flex-col flex-1 gap-3">
-          <Card className="no-scrollbar flex-1 overflow-y-auto  p-3 md:max-h-[50vh] max-h-[73vh]">
+          <Card className=" no-scrollbar flex-1 overflow-y-auto  p-3 md:max-h-[50vh] max-h-[73vh]">
             {messages.length === 0 && (
               <span className="bg-gray-400/20 rounded-full p-3 m-auto absolute top-1/2 left-1/2 -translate-x-1/2 w-max">
                 Enter prompt to talk to Annuar Ai

@@ -36,7 +36,7 @@ const FloatingIcons: FC = () => {
     <div className="fixed bottom-0 right-0 mb-4 mr-4 flex flex-col items-center gap-2 md:gap-4 md:mb-6 md:mr-6">
       <Button
         size="icon"
-        className="rounded-full"
+        className="rounded-full border-pulse"
         onClick={toggleChatDialog}
       >
         <Bot />
